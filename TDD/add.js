@@ -3,8 +3,9 @@ const add = (input) => {
 
         return 0
     }
+    const delimiter = /,|\n/
     return input
-        .split(',')         
+        .split(delimiter)         
         .map(Number)        
         .reduce((sum, num) => sum + num, 0)
 }

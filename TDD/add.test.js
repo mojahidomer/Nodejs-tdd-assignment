@@ -13,7 +13,7 @@ describe('String number Calculator', () => {
         const newLineInput = "1\n2,3"
         expect(add(newLineInput)).toBe(6);
       });
-      it("should returns the sum of comma-separated value when passed different delimi", () => {
+      it("should returns the sum of comma-separated value when passed different delimiter", () => {
         const newDelimiter = "//;\n1;2"
         expect(add(newDelimiter)).toBe(3);
       });

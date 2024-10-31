@@ -23,7 +23,7 @@ describe('String number Calculator', () => {
     });
     it("should ignore number greater than 1000", () => {
         expect(add("1,1001,3000")).toBe(1);
-        expect(() => add("1,2000,4")).toBe(5);
+        expect(add("1,2000,4")).toBe(5);
     });
 
 })

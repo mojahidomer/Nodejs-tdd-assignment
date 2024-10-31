@@ -14,13 +14,14 @@ const add = (input) => {
 
     const numberArray = numberString
         .split(delimiter).map(Number)
-        
+
     const negatives = numberArray.filter(num => num < 0); // Check for negative numbers
     if (negatives.length) {
         throw new Error(`Negative numbers not allowed: ${negatives.join(", ")}`);
     }
     return numberArray
-        .reduce((sum, num) => sum + num, 0)
+    .filter(num => num <= 1000)
+    .reduce((sum, num) => sum + num, 0)
 }
 
 module.exports = add

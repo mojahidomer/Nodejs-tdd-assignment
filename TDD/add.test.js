@@ -17,5 +17,9 @@ describe('String number Calculator', () => {
         const newDelimiter = "//;\n1;2"
         expect(add(newDelimiter)).toBe(3);
       });
+      it("should returns  error message for negative input ", () => {
+        expect(add("1,-2,3")).toThrow("Negative numbers not allowed: -2");
+        expect(add("1,-2,-3")).toThrow("Negative numbers not allowed: -2,-3");
+      });
 })
 
